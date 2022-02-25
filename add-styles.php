@@ -116,6 +116,49 @@ function tsl_bhm_2022_add_styles(){ ?>
             color: rgba(255, 255, 255, 0.75);
             margin-bottom: 48px;
         }
+
+        .bhm-navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 64px;
+            background-color: #111;
+            color: white;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            padding: 0 16px;
+        }
+
+        .bhm-navbar-main {
+            display: flex;
+            align-items: center;
+        }
+
+        .bhm-navbar-proj-home {
+            color: white;
+            font-size: 16px;
+            font-family: "Lora", serif;
+            font-weight: 600;
+            border-left: 1px solid rgba(255, 255, 255, 0.25);
+            margin-left: 8px;
+            padding-left: 16px;
+            text-transform: uppercase;
+        }
+
+        .bhm-navbar-main img {
+            width: 16px;
+            height: 16px;
+        }
+
+        .bhm-navbar-site-home {
+            padding: 6px 12px;
+            border-radius: 4px;
+        }
+
+        .bhm-navbar-site-home:hover {
+            background-color: rgba(255, 255, 255, 0.25);
+        }
     </style>
     <?php
 }
