@@ -19,4 +19,7 @@
         }
         ?>
     </div>
+    <div class="bhm-navbar-right">
+        <i class="fas fa-bars"></i>
+    </div>
 </div>

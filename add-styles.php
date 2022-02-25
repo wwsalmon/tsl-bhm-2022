@@ -145,13 +145,21 @@ function tsl_bhm_2022_add_styles(){ ?>
 
         .bhm-navbar-proj-home {
             color: white;
-            font-size: 16px;
+            font-size: 12px;
             font-family: "Lora", serif;
-            font-weight: 600;
+            font-weight: 500;
             border-left: 1px solid rgba(255, 255, 255, 0.25);
             margin-left: 8px;
             padding-left: 16px;
             text-transform: uppercase;
+            width: 220px;
+        }
+
+        @media (min-width: 600px) {
+            .bhm-navbar-proj-home {
+                font-size: 16px;
+                width: auto;
+            }
         }
 
         .bhm-navbar-main img {
@@ -179,13 +187,19 @@ function tsl_bhm_2022_add_styles(){ ?>
         }
 
         #bhm-main h1{
-            font-size: 64px;
+            font-size: 42px;
             font-weight: 600;
             color: white;
             text-transform: uppercase;
             max-width: 900px;
             margin: 0 auto;
             font-family: "Lora", serif;
+        }
+
+        @media (min-width: 600px) {
+            #bhm-main h1{
+                font-size: 64px;
+            }
         }
 
         h2.bhm-main-title {
@@ -212,6 +226,10 @@ function tsl_bhm_2022_add_styles(){ ?>
 
         #bhm-main .bhm-home-columns {
             margin-top: 64px;
+        }
+
+        .bhm-navbar-right {
+            margin-left: auto;
         }
     </style>
     <?php
