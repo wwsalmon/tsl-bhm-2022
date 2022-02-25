@@ -1,6 +1,6 @@
 <?php
-function tsl_bhm_2022_navbar($atts) {
+function tsl_bhm_2022($atts) {
     include "includes/bhm-navbar.php";
 }
 
-add_shortcode('tsl-bhm-2022-navbar', 'tsl_bhm_2022_navbar');
+add_shortcode('tsl-bhm-2022', 'tsl_bhm_2022');

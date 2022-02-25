@@ -17,6 +17,7 @@ function tsl_bhm_2022_add_styles(){ ?>
             background-color: #111;
             color: white;
             padding: 32px 0;
+            margin-bottom: 32px;
             position: relative;
         }
 
@@ -43,10 +44,15 @@ function tsl_bhm_2022_add_styles(){ ?>
             text-transform: uppercase;
             font-family: "Lora", serif;
             text-align: center;
-            max-width: 900px;
             margin: 8px auto 48px auto;
             color: white;
             font-weight: 600;
+        }
+
+        @media (min-width: 600px) {
+            #bhm-home-container h1 {
+                font-size: 48px;
+            }
         }
 
         .bhm-home-columns {
@@ -122,7 +128,7 @@ function tsl_bhm_2022_add_styles(){ ?>
         .bhm-home-about {
             font-family: "PT Serif", serif;
             color: rgba(255, 255, 255, 0.75);
-            margin-bottom: 48px;
+            margin-bottom: 16px;
         }
 
         .bhm-navbar {
@@ -191,7 +197,7 @@ function tsl_bhm_2022_add_styles(){ ?>
             font-weight: 600;
             color: white;
             text-transform: uppercase;
-            max-width: 900px;
+            max-width: 700px;
             margin: 0 auto;
             font-family: "Lora", serif;
         }

@@ -13,7 +13,7 @@
             while ( $query->have_posts() ) {
                 $query->the_post();
                 ?>
-                <a href="<?php the_permalink() ?>" class="bhm-navbar-proj-home">Claremont's Forgotten Black History</a>
+                <a href="<?php the_permalink() ?>" class="bhm-navbar-proj-home">Illuminating 5C Black legacies</a>
                 <?php
             }
         }

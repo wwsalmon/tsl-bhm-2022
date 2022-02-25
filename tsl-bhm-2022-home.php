@@ -15,18 +15,23 @@ class tsl_bhm_2022_home extends WP_Widget{
         <p class="bhm-uppercase">Black History Month 2022</p>
         <?php
         $query = get_main_query();
+        $bhm_title = 'Illuminating 5C Black Legacies';
+        $bhm_about_text = 'TSL dove into a century of archives and oral histories to rediscover the stories of the BSU trailblazers who spearheaded the creation of the OBSA and Africana Studies department.';
         if ( $query->have_posts() ) {
             while ( $query->have_posts() ) {
                 $query->the_post();
                 ?>
                 <a href="<?php the_permalink() ?>">
-                    <h1>Black Studies, Bombings and Bsomething: Claremont’s forgotten Black History</h1>
+                    <h1>
+                        <?php echo $bhm_title ?>
+                    </h1>
                 </a>
                 <?php
             }
         }
         ?>
         <div class="bhm-home-columns">
+            <div class="bhm-home-middle">
                 <?php
                 $args = array('category_name' => 'black-history-month-2022', 'tag' => 'bhm-main' );
                 $query = get_main_query();
@@ -34,19 +39,23 @@ class tsl_bhm_2022_home extends WP_Widget{
                 if ( $query->have_posts() ) {
                     while ( $query->have_posts() ) {
                         $query->the_post();
-                ?>
-                <a href="<?php the_permalink() ?>" class="bhm-home-middle">
-                    <img src="<?php echo catch_that_image()?>" alt="Lorem ipsum dolor et hello">
-                    <h2><?php the_title() ?></h2>
-                    <p class="bhm-author"><?php coauthors()?></p>
-                    <hr>
-                    <p class="bhm-home-about">
-                        We dug through the past 100 years of archives and interviewed alumni to reconstruct the story of how students fought for Black inclusion on campus.
-                    </p>
-                </a>
-                <?php
+                        ?>
+                        <a href="<?php the_permalink() ?>">
+                            <img src="<?php echo catch_that_image()?>" alt="Lorem ipsum dolor et hello">
+                            <h2><?php the_title() ?></h2>
+                            <p class="bhm-author"><?php coauthors()?></p>
+                        </a>
+                        <?php
                     }
                 }
+                ?>
+                <hr>
+                <p class="bhm-home-about">
+                    <?php echo $bhm_about_text ?>
+                </p>
+                <?php include "includes/about-link.php"?>
+            </div>
+                <?php
 
                 $num_posts = 2;
                 $offset = 0;

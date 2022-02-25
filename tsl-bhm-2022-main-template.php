@@ -1,13 +1,14 @@
 <?php
+$bhm_title = 'Illuminating 5C Black Legacies';
+$bhm_about_text = 'TSL dove into a century of archives and oral histories to rediscover the stories of the BSU trailblazers who spearheaded the creation of the OBSA and Africana Studies department.';
 get_header();
 include "includes/bhm-navbar.php";
 ?>
 <div id="bhm-main">
     <div id="bhm-main-top" class="bhm-container">
-        <h1>Black studies, bombings and bsomething</h1>
-        <h3 class="bhm-main-subtitle">Claremont's forgotten Black History</h3>
-        <p class="bhm-main-about">We dug through the past 100 years of archives and interviewed alumni to reconstruct the story of how students fought for Black inclusion on campus.</p>
-        <a href="" class="bhm-uppercase bhm-main-about-link">More about</a>
+        <h1><?php echo $bhm_title ?></h1>
+        <p class="bhm-main-about"><?php echo $bhm_about_text ?></p>
+        <?php include "includes/about-link.php"?>
     </div>
     <div class="bhm-home-columns bhm-container">
         <div class="bhm-home-middle">
