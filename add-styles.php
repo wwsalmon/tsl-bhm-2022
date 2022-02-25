@@ -5,6 +5,14 @@ function tsl_bhm_2022_add_styles(){ ?>
             overflow-x: hidden;
         }
 
+        .bhm-container {
+            max-width: 1100px;
+            padding-left: 16px;
+            padding-right: 16px;
+            box-sizing: content-box;
+            margin: 0 auto;
+        }
+
         #bhm-home-container {
             background-color: #111;
             color: white;
@@ -158,6 +166,52 @@ function tsl_bhm_2022_add_styles(){ ?>
 
         .bhm-navbar-site-home:hover {
             background-color: rgba(255, 255, 255, 0.25);
+        }
+
+        #bhm-main {
+            padding: 96px 0 24px 0;
+            background-color: #111;
+            color: white;
+        }
+
+        #bhm-main-top {
+            text-align: center;
+        }
+
+        #bhm-main h1{
+            font-size: 64px;
+            font-weight: 600;
+            color: white;
+            text-transform: uppercase;
+            max-width: 900px;
+            margin: 0 auto;
+            font-family: "Lora", serif;
+        }
+
+        h2.bhm-main-title {
+            font-size: 32px;
+            color: white;
+            font-weight: 600;
+        }
+
+        .bhm-main-subtitle {
+            font-size: 32px;
+            color: white;
+            font-weight: 500;
+            font-family: "Lora", serif;
+            margin: 32px 0;
+        }
+
+        .bhm-main-about {
+            font-family: "PT Serif", serif;
+            margin: 32px auto;
+            font-size: 20px;
+            max-width: 520px;
+            color: rgba(255, 255, 255, 0.75);
+        }
+
+        #bhm-main .bhm-home-columns {
+            margin-top: 64px;
         }
     </style>
     <?php
