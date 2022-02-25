@@ -1,10 +1,25 @@
 <?php
 function tsl_bhm_2022_add_styles(){ ?>
     <style>
+        body {
+            overflow-x: hidden;
+        }
+
         #bhm-home-container {
             background-color: #111;
             color: white;
             padding: 32px 0;
+            position: relative;
+        }
+
+        #bhm-home-container::before {
+            content: "";
+            background-color: #111;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 200vw;
+            left: -50vw;
         }
 
         .bhm-uppercase {
@@ -28,8 +43,21 @@ function tsl_bhm_2022_add_styles(){ ?>
 
         .bhm-home-columns {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            grid-column-gap: 64px;
+        }
+
+        @media (min-width: 900px) {
+            .bhm-home-columns {
+                grid-template-columns: repeat(3, 1fr);
+                grid-column-gap: 64px;
+            }
+
+            .bhm-home-columns > div:first-of-type {
+                grid-row: 1;
+            }
+
+            .bhm-home-middle {
+                grid-column: 2;
+            }
         }
 
         .bhm-home-post {
@@ -80,6 +108,7 @@ function tsl_bhm_2022_add_styles(){ ?>
         .bhm-home-about {
             font-family: "PT Serif", serif;
             color: rgba(255, 255, 255, 0.75);
+            margin-bottom: 48px;
         }
     </style>
     <?php
