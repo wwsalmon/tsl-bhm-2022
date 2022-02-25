@@ -158,7 +158,7 @@ function tsl_bhm_2022_add_styles(){ ?>
             margin-left: 8px;
             padding-left: 16px;
             text-transform: uppercase;
-            width: 220px;
+            width: 160px;
         }
 
         @media (min-width: 600px) {
@@ -236,6 +236,36 @@ function tsl_bhm_2022_add_styles(){ ?>
 
         .bhm-navbar-right {
             margin-left: auto;
+        }
+
+        #bhm-sidebar {
+            width: 300px;
+            height: 100%;
+            position: fixed;
+            right: -300px;
+            top: 0;
+            background-color: white;
+            padding: 16px;
+            transition: right 0.2s ease;
+        }
+
+        #bhm-sidebar.open {
+            right: 0;
+        }
+
+        .bhm-sidebar-top {
+            display: flex;
+        }
+
+        .bhm-sidebar-top button {
+            margin-left: auto;
+        }
+
+        #bhm-sidebar a:not(:last-of-type) {
+            display: block;
+            padding-bottom: 12px;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+            margin: 12px 0;
         }
     </style>
     <?php

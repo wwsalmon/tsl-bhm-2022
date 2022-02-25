@@ -20,6 +20,34 @@
         ?>
     </div>
     <div class="bhm-navbar-right">
-        <i class="fas fa-bars"></i>
+        <button onclick="onToggleSidebar()">
+            <i class="fas fa-bars"></i>
+        </button>
     </div>
 </div>
+<div id="bhm-sidebar">
+    <div class="bhm-sidebar-top">
+        <button onclick="onToggleSidebar()">
+            <i class="fas fa-times"></i>
+        </button>
+    </div>
+    <?php
+    $args = array('category_name' => 'black-history-month-2022');
+    $query = new WP_Query($args);
+    if ( $query->have_posts() ) {
+        while ( $query->have_posts() ) {
+            $query->the_post();
+            ?>
+            <a href="<?php the_permalink() ?>"><?php the_title() ?></a>
+    <?php
+        }
+    }
+    ?>
+</div>
+<script>
+    function onToggleSidebar() {
+        const sidebar = document.getElementById("bhm-sidebar");
+        console.log(sidebar);
+        sidebar.classList.toggle("open");
+    }
+</script>
