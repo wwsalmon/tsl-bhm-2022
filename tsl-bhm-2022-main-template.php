@@ -37,3 +37,33 @@ while ( have_posts() ) : the_post();
         ?>
     </div>
 </div>
+<div class="bhm-container bhm-main-body">
+    <div class="bhm-main-timeline">
+        <?php
+        $json = file_get_contents(plugin_dir_path(__FILE__) . 'timeline.json');
+        $jsonData = json_decode($json);
+        foreach ($jsonData as $event) {
+            ?>
+                <div class="bhm-timeline-item">
+                    <div class="bhm-timeline-dot"></div>
+                    <p class="bhm-timeline-date"><?php echo $event->date ?></p>
+                    <?php if ($event->photo != "") {
+                        ?>
+                        <img src="<?php echo plugin_dir_url( __FILE__ ) ?>/photos/<?php echo $event->photo ?>.jpg" alt="">
+                        <?php
+                    } ?>
+                    <p><?php echo $event->text ?></p>
+                    <?php if ($event->link != "") {
+                        ?>
+                        <a href="<?php echo $event->link ?>">Read more</a>
+                        <?php
+                    } ?>
+                </div>
+        <?php
+        }
+        ?>
+    </div>
+    <div class="bhm-main-text">
+        <?php the_content() ?>
+    </div>
+</div>

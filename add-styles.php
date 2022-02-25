@@ -133,6 +133,7 @@ function tsl_bhm_2022_add_styles(){ ?>
 
         .bhm-navbar {
             position: fixed;
+            z-index: 10;
             top: 0;
             left: 0;
             height: 64px;
@@ -240,6 +241,7 @@ function tsl_bhm_2022_add_styles(){ ?>
 
         #bhm-sidebar {
             width: 300px;
+            z-index: 11;
             height: 100%;
             position: fixed;
             right: -300px;
@@ -266,6 +268,73 @@ function tsl_bhm_2022_add_styles(){ ?>
             padding-bottom: 12px;
             border-bottom: 1px solid rgba(0, 0, 0, 0.25);
             margin: 12px 0;
+        }
+
+        .bhm-main-body {
+            margin-top: 48px;
+        }
+
+        @media (min-width: 900px) {
+            .bhm-main-body {
+                display: flex;
+            }
+        }
+
+        .bhm-main-text {
+            max-width: 720px;
+            font-size: 18px;
+            margin-left: auto;
+        }
+
+        .bhm-main-timeline {
+            width: 320px;
+            padding-right: 48px;
+            flex-shrink: 0;
+        }
+
+        .bhm-timeline-item {
+            position: relative;
+            padding-left: 20px;
+            padding-bottom: 32px;
+            border-left: 1px solid rgba(0,0,0,0.5);
+            opacity: 0.75;
+            transition: all 0.2s ease;
+        }
+
+        .bhm-timeline-item:hover {
+            opacity: 1.0;
+        }
+
+        .bhm-timeline-dot {
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            background-color: black;
+            border-radius: 4px;
+            top: 6px;
+            left: -4px;
+        }
+
+        .bhm-timeline-date {
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        .bhm-timeline-item p {
+            font-size: 14px;
+            margin-bottom: 0;
+        }
+
+        .bhm-timeline-item img {
+            max-height: 300px;
+            margin: 12px 0;
+            border-radius: 4px;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        .bhm-timeline-item a {
+            font-size: 12px;
         }
     </style>
     <?php
