@@ -6,9 +6,23 @@ class tsl_bhm_2022_home extends WP_Widget{
         );
     }
 
+    function catch_that_image() {
+        global $post, $posts;
+        $first_img = '';
+        ob_start();
+        ob_end_clean();
+        $output = preg_match_all('/<img.+?src=[\'"]([^\'"]+)[\'"].*?>/i', $post->post_content, $matches);
+        $first_img = $matches[1][0];
+
+        if(empty($first_img)) {
+            $first_img = "/path/to/default.png";
+        }
+        return $first_img;
+    }
+
     public function widget($args, $instance){
         echo $args["before_widget"];
-        echo <<<'EOD'
+?>
 <div id="bhm-home-container">
     <div style="position: relative">
         <p class="bhm-uppercase">Black History Month 2022</p>
@@ -26,49 +40,53 @@ class tsl_bhm_2022_home extends WP_Widget{
                 </p>            
             </a>
             <div>
-                <a class="bhm-home-post" href="">
-                    <div>
-                        <img src="https://blinq.art/blog/wp-content/uploads/2018/04/blinq-art-black-white-default.jpg" alt="Lorem ipsum dolor et hello">
-                    </div>
-                    <div>
-                        <h2>Lorem ipsum dolor et hello</h2>     
-                        <p class="bhm-author">Mariana Duran</p>           
-                    </div>
-                </a>   
-                <a class="bhm-home-post" href="">
-                    <div>
-                        <img src="https://blinq.art/blog/wp-content/uploads/2018/04/blinq-art-black-white-default.jpg" alt="Lorem ipsum dolor et hello">
-                    </div>
-                    <div>
-                        <h2>Lorem ipsum dolor et hello</h2>     
-                        <p class="bhm-author">Mariana Duran</p>           
-                    </div>
-                </a>     
+                <?php
+                $args = array( 'posts_per_page' => 2, 'offset'=> 0, 'category_name' => 'black-history-month-2022' );
+                $query = new WP_Query($args);
+                if ( $query->have_posts() ) {
+                    while ( $query->have_posts() ) {
+                        $query->the_post();
+                        ?>
+                        <a class="bhm-home-post" href="<?php the_permalink()?>">
+                            <div>
+                                <img src="<?php echo $this->catch_that_image() ?>" alt="Lorem ipsum dolor et hello">
+                            </div>
+                            <div>
+                                <h2><?php the_title()?></h2>
+                                <p class="bhm-author"><?php coauthors()?></p></p>
+                            </div>
+                        </a>
+                    <?php }
+                }
+                wp_reset_postdata();
+                ?>
             </div>
             <div>
-                <a class="bhm-home-post" href="">
-                    <div>
-                        <img src="https://blinq.art/blog/wp-content/uploads/2018/04/blinq-art-black-white-default.jpg" alt="Lorem ipsum dolor et hello">
-                    </div>
-                    <div>
-                        <h2>Lorem ipsum dolor et hello</h2>     
-                        <p class="bhm-author">Mariana Duran</p>           
-                    </div>
-                </a>   
-                <a class="bhm-home-post" href="">
-                    <div>
-                        <img src="https://blinq.art/blog/wp-content/uploads/2018/04/blinq-art-black-white-default.jpg" alt="Lorem ipsum dolor et hello">
-                    </div>
-                    <div>
-                        <h2>Lorem ipsum dolor et hello</h2>     
-                        <p class="bhm-author">Mariana Duran</p>           
-                    </div>
-                </a>     
+                <?php
+                $args = array( 'posts_per_page' => 2, 'offset'=> 2, 'category_name' => 'black-history-month-2022' );
+                $query = new WP_Query($args);
+                if ( $query->have_posts() ) {
+                    while ( $query->have_posts() ) {
+                        $query->the_post();
+                        ?>
+                        <a class="bhm-home-post" href="<?php the_permalink()?>">
+                            <div>
+                                <img src="<?php echo $this->catch_that_image() ?>" alt="Lorem ipsum dolor et hello">
+                            </div>
+                            <div>
+                                <h2><?php the_title()?></h2>
+                                <p class="bhm-author"><?php coauthors()?></p>
+                            </div>
+                        </a>
+                    <?php }
+                }
+                wp_reset_postdata();
+                ?>
             </div>
         </div>
     </div>
 </div>
-EOD;
+<?php
         echo $args["after_widget"];
     }
 }

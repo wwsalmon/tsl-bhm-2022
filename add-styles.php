@@ -84,6 +84,12 @@ function tsl_bhm_2022_add_styles(){ ?>
             margin-right: 16px;
         }
 
+        .bhm-home-post img {
+            width: 140px;
+            height: 100px;
+            object-fit: cover;
+        }
+
         .bhm-home-post > div:last-of-type {
             display: flex;
             flex-direction: column;
