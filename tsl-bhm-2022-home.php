@@ -16,7 +16,7 @@ class tsl_bhm_2022_home extends WP_Widget{
         <?php
         $query = get_main_query();
         $bhm_title = 'Illuminating 5C Black Legacies';
-        $bhm_about_text = 'TSL dove into a century of archives and oral histories to rediscover the stories of the BSU trailblazers who spearheaded the creation of the OBSA and Africana Studies department.';
+        $bhm_about_text = 'TSL dug through a century of archives and conducted oral histories to rediscover the stories of the BSU trailblazers who fought for Black inclusion on campus.';
         if ( $query->have_posts() ) {
             while ( $query->have_posts() ) {
                 $query->the_post();
