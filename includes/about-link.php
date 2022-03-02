@@ -5,7 +5,7 @@ if ( $query->have_posts() ) {
     while ( $query->have_posts() ) {
         $query->the_post();
         ?>
-        <a href="<?php the_permalink() ?>" class="bhm-uppercase">More about</a>
+        <a href="<?php the_permalink() ?>" class="bhm-uppercase">Editor's note</a>
         <?php
     }
 }
