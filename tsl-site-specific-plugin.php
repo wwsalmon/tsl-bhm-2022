@@ -1,7 +1,7 @@
 <?php
 /**
- * Plugin Name: TSL Black History Month 2022 Plugin
- * Description: Adds styling for Black History Month 2022 archives stories
+ * Plugin Name: TSL Site Specific Plugin
+ * Description: Adds styling for data journalism pieces and BHM 2022 special project (expand as new projects made)
  * Version: 0.1.0
  * Author: Samson Zhang
  * Author URI: https://www.samsonzhang.com/
