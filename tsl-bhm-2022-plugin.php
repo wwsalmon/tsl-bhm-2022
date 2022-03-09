@@ -9,7 +9,6 @@
 
 require_once(plugin_dir_path(__FILE__) . "functions.php");
 require_once(plugin_dir_path(__FILE__) . "add-styles.php");
-require_once(plugin_dir_path(__FILE__) . "add-fonts.php");
 require_once(plugin_dir_path(__FILE__) . "add-shortcodes.php");
 require_once(plugin_dir_path(__FILE__) . "add-templates.php");
 require_once(plugin_dir_path(__FILE__) . "tsl-bhm-2022-home.php");

@@ -21,14 +21,14 @@
     </div>
     <div class="bhm-navbar-right">
         <button onclick="onToggleSidebar()">
-            <i class="fas fa-bars"></i>
+            <i class="fa fa-bars"></i>
         </button>
     </div>
 </div>
 <div id="bhm-sidebar">
     <div class="bhm-sidebar-top">
         <button onclick="onToggleSidebar()">
-            <i class="fas fa-times"></i>
+            <i class="fa fa-times"></i>
         </button>
     </div>
     <?php

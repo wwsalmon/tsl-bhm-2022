@@ -22,7 +22,7 @@ while ( have_posts() ) : the_post();
                 ?>
             </h2>
 <p class="bhm-uppercase" style="margin: 48px 0 12px 0">scroll down</p>
-    <i class="fas fa-chevron-down" style="margin-bottom: 48px"></i>
+    <i class="fa fa-chevron-down" style="margin-bottom: 48px"></i>
             <?php
                 endwhile;
                 ?>
