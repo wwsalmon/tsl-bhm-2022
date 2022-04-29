@@ -336,6 +336,8 @@ function tsl_bhm_2022_add_styles(){ ?>
         .bhm-timeline-item a {
             font-size: 12px;
         }
+
+        .no-sidebar #primary {border-right: none; padding-right: 0; padding-top: 64px;}
     </style>
     <?php
 }
