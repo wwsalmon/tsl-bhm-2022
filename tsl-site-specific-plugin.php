@@ -2,7 +2,7 @@
 /**
  * Plugin Name: TSL Site Specific Plugin
  * Description: Adds styling for data journalism pieces and BHM 2022 special project (expand as new projects made)
- * Version: 0.2.0
+ * Version: 0.2.1
  * Author: Samson Zhang
  * Author URI: https://www.samsonzhang.com/
  */
