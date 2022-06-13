@@ -349,9 +349,8 @@ function datavis_remove_actions() {
 add_action('get_header', 'datavis_remove_actions');
 
 function datavis_tuition_2022_add_scripts() {
-    ?><script>console.log("new2")</script><?php
     global $post;
-    if (has_tag("datavis-tuition-2022", $post)) {
+    if (is_single($post) && has_tag("datavis-tuition-2022", $post)) {
         wp_enqueue_style( 'datavis-tuition-2022-style', plugin_dir_url( __FILE__ ) .  'datavis-tuition-2022/static/idyll_styles.css' );
         wp_enqueue_script( 'datavis-tuition-2022-script', plugin_dir_url( __FILE__ ) .  'datavis-tuition-2022/static/idyll_index.js', array(), "", true);
         wp_dequeue_style( 'colornews-style' );
